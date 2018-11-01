@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Home Page</title>
+	</head>
+	<body>
+		<header>
+				<h1>Customer List</h1>
+				<hr/>
+		</header>
+		<ul>
+			{% for customer in customers%}
+			<li><a href = "/customers/details/{{customer.id}}/">{{customer.firstName}} {{customer.lastName}}</a></li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
